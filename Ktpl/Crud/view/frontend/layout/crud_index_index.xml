@@ -1,0 +1,16 @@
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">        
+    <head>
+        <title xsi:type="string">Testing</title> 
+    </head>
+    <body>    
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Testing</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Ktpl\Crud\Block\Crud" name="crud" template="crud.phtml"></block>
+        </referenceContainer>
+        
+    </body>
+</page>

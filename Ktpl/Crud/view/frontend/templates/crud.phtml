@@ -1,0 +1,39 @@
+<style type="text/css">
+    .blog-post-list{
+        width: 100%;        
+    }
+    .blog-post-list-item{
+        display: inline-block;
+        width: 30%;
+    }
+    .crud-toolbar{
+        text-align: center!important;
+    }
+</style>
+<?php $crudData = $block->getCollection(); ?>
+<div class="flexslider flexslider-8">
+    <div class="top-toolbar-wraper">
+        <div class="crud-toolbar">
+            <?php echo $block->getPagerHtml(); ?>
+        </div>
+        <div class="edit-form">
+            <a href="<?php echo $this->getUrl('crud/index/form',['_secure' => true]) ?>">Add new Data</a>
+        </div>
+    </div>
+    <ul class="blog-post-list">
+        <?php foreach ($crudData as $crud): ?>
+            <li class="blog-post-list-item">
+                <h3 class="blog-post-item-title"><?php echo $crud['title']; ?></h3>
+                <div class="blog-post-item-content"><?php echo $crud['content']; ?></div>
+                <div class="blog-post-item-meta"><img height="50" width="50" alt="" src="<?php echo $block->getBannerImage($crud['image']); ?>"/></div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    <div class="crud-toolbar">
+        <?php echo $block->getPagerHtml(); ?>
+    </div>
+</div>
+
+
+
+

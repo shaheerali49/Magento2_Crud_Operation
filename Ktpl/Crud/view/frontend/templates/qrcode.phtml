@@ -1,0 +1,6 @@
+<?php 
+$block->getQrcode();
+?>
+<div class="qr-code-display">
+    <img src='<?php echo $this->getMediaUrl()."qrcode/". $block->getProductSku().".png"; ?>'/>    
+</div>

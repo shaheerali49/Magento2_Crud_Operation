@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Ktpl_Crud::ktpl" title="Ktpl Main" module="Ktpl_Crud" sortOrder="100" resource="Ktpl_Crud::crud"/>
+        <add id="Ktpl_Crud::crud" title="Ktpl crud" module="Ktpl_Crud" sortOrder="1" parent="Ktpl_Crud::ktpl" action="crud/crud" resource="Ktpl_Crud::crud"/>
+    </menu>
+</config>

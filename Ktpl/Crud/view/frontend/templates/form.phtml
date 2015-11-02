@@ -1,0 +1,46 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+?>
+<form class="form contact" action="<?php echo $this->getUrl('crud/index/post', ['_secure' => true]); ?>" id="contact-form" method="post" data-hasrequired="<?php echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}' enctype="multipart/form-data">
+    <fieldset class="fieldset">                
+        <div class="field name required">
+            <label class="label" for="title"><span><?php echo __('Title') ?></span></label>
+            <div class="control">
+                <input name="title" id="title" title="<?php echo __('Title') ?>" value="" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>        
+        <div class="field comment required">
+            <label class="label" for="content"><span><?php echo __('Comment') ?></span></label>
+            <div class="control">
+                <textarea name="content" id="content" title="<?php echo __('Comment') ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+        <div class="field comment required">
+            <label class="label" for="image"><span><?php echo __('Image') ?></span></label>
+            <div class="control">
+                <input name="image" id="image" title="<?php echo __('Image') ?>" value="" class="input-text" type="file" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field status required">
+            <label class="label" for="is_active"><span><?php echo __('Status') ?></span></label>
+            <div class="control">                
+                <select class="form-control" name="is_active" id="is_active" data-validate="{required:true}">
+                    <option value="1">Enable</option>
+                    <option value="0">Disable</option>                    
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">            
+            <button type="submit" title="<?php echo __('Submit') ?>" class="action submit primary">
+                <span><?php echo __('Submit') ?></span>
+            </button>
+        </div>
+    </div>
+</form>
